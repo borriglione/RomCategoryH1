@@ -38,8 +38,8 @@ class Rom_CategoryH1_Model_Category extends Mage_Catalog_Model_Category
         $currentCategory = Mage::registry('current_category');
 
         //Check if current category is given and IDs are matching
-        if ($this->getId() == $currentCategory->getId()
-            && $currentCategory instanceof Mage_Catalog_Model_Category
+        if ($currentCategory instanceof Mage_Catalog_Model_Category
+            && $this->getId() == $currentCategory->getId()
             && true === $this->referrerIsCategoryViewTemplate()) {
             //If the special h1 title is given, use it. Otherwise return the normal name
             if (false === is_null($currentCategory->getCategoryH1Title())) {
