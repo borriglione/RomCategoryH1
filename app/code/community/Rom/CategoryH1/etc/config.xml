@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category   Rom
+ * @package    Rom_CategoryH1
+ * @copyright  Copyright (c) 2013 ROM Agence de communication <rom@rom.fr>
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author     André Herrn <andre.herrn@rom.fr>
+ */
+-->
+<config>
+    <modules>
+        <Rom_CategoryH1>
+            <version>0.1.1</version>
+        </Rom_CategoryH1>
+    </modules>
+    <global>
+        <models>
+            <romcategoryh1>
+               <class>Rom_CategoryH1_Model</class>
+               <resourceModel>romcategoryh1_mysql4</resourceModel>
+            </romcategoryh1>
+            <catalog>
+                <rewrite>
+                    <category>Rom_CategoryH1_Model_Category</category>
+                </rewrite>
+            </catalog>
+        </models>
+        <helpers>
+            <romcategoryh1>
+                <class>Rom_CategoryH1_Helper</class>
+            </romcategoryh1>
+        </helpers>
+        <resources>
+            <romcategoryh1_setup>
+                <setup>
+                    <module>Rom_CategoryH1</module>
+                    <class>Rom_CategoryH1_Model_Resource_Setup</class>
+                </setup>
+            </romcategoryh1_setup>
+        </resources>
+    </global>
+</config>
