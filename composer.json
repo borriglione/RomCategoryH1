@@ -1,0 +1,14 @@
+{
+  "name": "rom/categoryh1",
+  "license": ["OSL-3.0"],
+  "type": "magento-module",
+  "description": "This extension allows a special value for the h1-title of a category view page",
+  "homepage": "https://rom.codebasehq.com/projects/plain-modules/repositories/askacatalog/tree/master",
+  "authors":[{
+    "name": "André Herrn",
+    "email": "andre.herrn@rom.fr"
+  }],
+  "require": {
+    "magento-hackathon/magento-composer-installer": "*"
+  }
+}
