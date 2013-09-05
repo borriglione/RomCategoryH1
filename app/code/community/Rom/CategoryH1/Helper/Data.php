@@ -23,4 +23,20 @@
  * @author     André Herrn <andre.herrn@rom.fr>
  */
 class Rom_CategoryH1_Helper_Data extends Mage_Core_Helper_Abstract
-{ }
+{
+    /**
+     * Get category h1 title or as fallback the category name
+     * 
+     * @param Mage_Catalog_Model_Category $category
+     * @return string
+     */
+    public function getCategoryTitle($category)
+    {
+        //Set category title
+        if (true === is_null($category->getCategoryH1Title()) || '' == $category->getCategoryH1Title()) {
+            return $category->getName();
+        } else {
+            return $category->getCategoryH1Title();
+        }
+    }
+}
