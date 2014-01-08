@@ -64,7 +64,7 @@ class Rom_CategoryH1_Model_Category extends Mage_Catalog_Model_Category
         //Loop though every frame of the strack trace
         foreach (debug_backtrace() as $frame) {
             foreach ($this->categoryViewTemplates as $categoryViewTemplate) {
-                if (false !== strpos($frame['file'], $categoryViewTemplate)) {
+                if (true === isset($frame['file']) && false !== strpos($frame['file'], $categoryViewTemplate)) {
                     return true;
                 }
             }
