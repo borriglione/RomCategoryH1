@@ -42,7 +42,7 @@ class Rom_CategoryH1_Model_Category extends Mage_Catalog_Model_Category
             && $this->getId() == $currentCategory->getId()
             && true === $this->referrerIsCategoryViewTemplate()) {
             //If the special h1 title is given, use it. Otherwise return the normal name
-            if (false === is_null($currentCategory->getCategoryH1Title())) {
+            if (false === is_null($currentCategory->getCategoryH1Title()) && '' != $currentCategory->getCategoryH1Title()) {
                 return $currentCategory->getCategoryH1Title();
             } else {
                 return parent::getName();
